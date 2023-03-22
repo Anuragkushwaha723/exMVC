@@ -10,13 +10,13 @@ exports.getAddProduct=(req, res, next) => {
 }
 exports.postAddProduct=(req, res, next) => {
     products.push({ title: req.body.title });
-    res.redirect('/');
+    res.redirect('/shop');
 }
 exports.getProduct=(req, res, next) => {
     res.render('shop', {
       prods: products,
       pageTitle: 'Shop',
-      path: '/',
+      path: '/shop',
       hasProducts: products.length > 0,
       activeShop: true,
       productCSS: true
